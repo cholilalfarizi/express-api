@@ -1,11 +1,11 @@
-import Transaction from "../src/model/TransactionModel.js";
-import TransactionDetail from "../src/model/TransactionDetailModel.js";
-import Food from "../src/model/FoodModel.js";
+import Transaction from "../model/TransactionModel.js";
+import TransactionDetail from "../model/TransactionDetailModel.js";
+import Food from "../model/FoodModel.js";
 import { responseMessage } from "../../utils/responseMessage.js";
 import { StatusCodes, getReasonPhrase } from "http-status-codes";
-import Customer from "../src/model/CustomerModel.js";
+import Customer from "../model/CustomerModel.js";
 import sequelize from "sequelize";
-import db from "../src/config/database.js";
+import db from "../config/database.js";
 
 export const createTransaction = async (req, res) => {
   const { customer_id, food_items } = req.body;
